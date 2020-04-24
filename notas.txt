@@ -26,3 +26,28 @@ ser sobre aquela idea do clean code
 	a váriavel $user com "empty key value pierce"
 
 56:00 Deu um  Bugzin ,más ta massa vendo ele resolver
+
+
+----- na real mesmo dia , horas depois -> OUTRO DIAA -------
+
+53:00 min tentando criar um usuário novo
+53:00 começa a investigar o erro
+
+59:00 Perfect it works fine
+
+59:56 como fazer essse atalho de escrever nas duas linhas ao mesmo tempo
+
+Delete Function, doing this by get request is not a secure way
+
+1:05 post method
+
+!! 1:09 We need to think about validation on real world projects !!
+
+filter_var
+
+Example if you whant to check if it a valid email.
+
+
+
+
+

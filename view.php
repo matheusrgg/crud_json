@@ -29,6 +29,15 @@ if(!$user){
     <h3>Update User</h3>
     <h3>View User:<b><?php echo $user['name'] ?></h3>
 </div>
+
+<div class="card-body">
+    <a class="btn btn-secondary" href="update.php?id=<?php echo $user['id'] ?>">Update</a>
+    <form style="display: inline-block" action="delete.php" method="POST">
+                <input type="hidden" name="id" value="<?php echo $user['id'] ?>">
+                <button class="btn btn-sm btn-outline-danger">Delete</button>
+            </form>
+</div>
+
 <table class="table">
         <tbody>
         

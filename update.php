@@ -26,11 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $user = updateUser($_POST, $userId);
     
   
-    if(isset($_FILES['picture'])){
+   
 
-        uploadImage($_FILES['picture'], $user);
+    uploadImage($_FILES['picture'], $user);
 
-    }
 
     header("Location:index.php");
 

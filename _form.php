@@ -4,12 +4,15 @@
     <div class="card">
     
         <div class="card-header">
+            <h3>
 
-        <?php if($user['id']) : ?>
-        <h3>Update user <b><?php echo $user['name'] ?></b></h3>
-        <?php else: ?>
-            Create new user
-        <?php endif ?>
+                <?php if($user['id']) : ?>
+                    Update user <b><?php echo $user['name'] ?></b>
+                <?php else: ?>
+                    Create new user
+                <?php endif ?>
+
+            </h3>
         </div>
 
         <div class="card-body">

@@ -26,20 +26,20 @@ function getUserById($id){
 
 
 
-function createUsers($data)
+function createUser($data)
 {
 
    
-   $user  =getUsers();
+   $users  =getUsers();
 
    $data['id'] = rand(100000, 200000);
 
 
-$users[] = $data;
+   $users[] = $data;
 
-putJson($users);
+   putJson($users);
 
-return $data;
+   return $data;
 
 }
 
@@ -69,12 +69,24 @@ return $updateUser;
 
 function deleteUser($id){
 
+
+      $users = getUsers();
+
+      foreach($users as $i => $user){
+         if($user['id'] == $id){
+            array_splice($users, $i  , 1);
+         }
+      }
+
+      putJson($users);
+
 }
 
 function uploadImage($file, $user)
 {
 
         // move_uploaded_file ( string $filename , string $destination ) : bool
+   if(isset($_FILES['picture']) && $_FILES['picture']['name']){
 
         if(!is_dir(__DIR__ . "/images")) {
          mkdir(__DIR__ . "/images");
@@ -93,6 +105,7 @@ function uploadImage($file, $user)
 
      $user['extension'] = $extension;
      updateUser($user, $user['id']);
+   }
 }
 
 
