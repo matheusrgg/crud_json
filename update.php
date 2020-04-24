@@ -19,19 +19,35 @@ if(!$user){
 // var_dump($user);
 // echo '</pre>';
 
+$errors = [
+
+    'name' =>"",
+    'username' =>"",
+    'email' => "",
+    'phone' => "",
+    'website' => "",
+
+];
+
+
 
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-    $user = updateUser($_POST, $userId);
+    
     
   
-   
+    $isValid = validateUser($user, $errors);
+
+    if($isValid)
+ {   
+     
+    $user = updateUser($_POST, $userId);
 
     uploadImage($_FILES['picture'], $user);
 
 
-    header("Location:index.php");
+    header("Location:index.php");}
 
 }
 
