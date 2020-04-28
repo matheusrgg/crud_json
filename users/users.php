@@ -146,5 +146,5 @@ function validateUser($user, $errors)
 
   // ------- Final Start of validation
 
-   return $isValid,
+   return $isValid;
 }

@@ -35,7 +35,7 @@ $errors = [
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     
-    
+    $user = array_merge($user, $_POST);
   
     $isValid = validateUser($user, $errors);
 
